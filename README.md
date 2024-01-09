@@ -5,7 +5,7 @@
 Tips:
 - Use the Sinatra package for deploying a minimal dynamic web page.
 - Define paths to populate the web page.
-- Use the forward slash symbol ("\") to embed multiline html code within Ruby code:
+- Use the backward slash symbol ("\\") to embed multiline html code within Ruby code:
 
 ```
 get("/") do

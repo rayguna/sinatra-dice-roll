@@ -31,7 +31,7 @@ get("/") do
 end
 ```
 
-- To embed ruby codes within  a html code, enclose the code within <%= %>, e.g., <%= rand(100) %>.
+- To pass and display ruby variables within a html code, enclose the variable name within <%= %>, e.g., <%= rand(100) %>.
 - To pass variables from *.rb to *.erb code, precede the variable name in *.rb file with @, e.g., @outcome. In *.erbfile, enclose the variable name within <%= %>, e.g., <%= @outcome %>.   
 
 - To simplify the coding efforts when having multiple pages that share very similar contents, use a master template called wrapper.erb and add an argument (or variable) to the erb method, as follows. The key :layout calls the ERB template.
@@ -42,9 +42,9 @@ erb(:two_six, { :layout => :wrapper })
 
 - Note to add the <%= yield %> argument to the wrapper.erb tremplate to pass the additional contents that are unique to each die rolls (see below).
 
-- By using the master template, each of the die pages contain only the unique contents. Only one copy of the shared content is needed, which resides within the wrapper.erb file. The duplicate code of the contents of the wrapper.erb within each of the die pages can be removed. 
+- By using the master template, each of the die pages only need to contain the unique contents. Only one copy of the shared content is needed, which resides within the wrapper.erb file. The duplicate code of the contents of the wrapper.erb within each of the die pages can be removed. 
 
-- ANother advantage of placing the shared contents in one place (i.e., within wrapper.erb) is that any changes made within this one file is immediately reflected on the rest of the pages. 
+- Another advantage of placing the shared contents in one place (i.e., within wrapper.erb) is that any changes made within this one file is immediately reflected on the rest of the pages. 
 
 ```
 <!-- /views/wrapper.erb -->

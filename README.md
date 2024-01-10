@@ -40,7 +40,7 @@ end
 erb(:two_six, { :layout => :wrapper })
 ```
 
-- Note to add the <%= yield %> argument to the wrapper.erb tremplate to pass the additional contents that are unique to each die rolls (see below).
+- Remember to add the <%= yield %> argument to the wrapper.erb template to pass the additional contents that are unique to each die rolls (see below).
 
 - By using the master template, each of the die pages only need to contain the unique contents. Only one copy of the shared content is needed, which resides within the wrapper.erb file. The duplicate code of the contents of the wrapper.erb within each of the die pages can be removed. 
 
@@ -73,7 +73,7 @@ erb(:two_six, { :layout => :wrapper })
 
 - Link to the model page (use http instead of https): <a href="http://dice-roll.matchthetarget.com/" target="_blank"> http://dice-roll.matchthetarget.com/ </a>  
 
-- There is another variant of ERB tag for embedding Ruby codes into a html tag (i.e., <% %> without the equal sign), but without being displayed on the html page. In contrast, we would use the same tag with an equal sign to pass and display a variable from the ruby file. The variable name must be preceeded by the "@" sign, i.e., <%= @myvariable %>.
+- There is another <i>variant</i> of ERB tag for embedding Ruby codes into a html tag (i.e., <% %> without the equal sign), but without being displayed on the html page. In contrast, we would use the same tag with an equal sign to pass and display a variable from the ruby file. The variable name must be preceeded by the "@" sign, i.e., <%= @myvariable %>.
 
 - In the example below, we use the silent ERB tag to embed ruby code, which is not displayed on the html page. We use the non-silent ERB tag as well to pass and display the ruby variables. 
 
